@@ -2,8 +2,8 @@
 /*jslint vars : true*/
 function qs(a) {
     var l = [], k = [], r = [];
-    a.forEach(function (e) {
-        (e === a[0] ? k : (e > a[0] ? r : l)).push(e);
+    a.forEach(e => {
+        (e == a[0] ? k : (e > a[0] ? r : l)).push(e);
     });
     return a.length ? qs(l).concat(k, qs(r)) : [];
 }
